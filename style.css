@@ -31,17 +31,23 @@ h1::after {
 
 h1::before {
   background: var(--bg-color);
-  animation: typewriter var(--typewriterSpeed) steps(23) forwards;
+  animation: typewriter var(--typewriterSpeed) steps(23) 1s forwards;
 }
 h1::after {
   width: 0.125em;
   background: black;
-  animation: typewriter var(--typewriterSpeed) steps(23) forwards;
+  animation: typewriter var(--typewriterSpeed) steps(23) 1s forwards,
+    blink 750ms steps(23) infinite;
 }
 
 @keyframes typewriter {
   to {
     left: 100%;
+  }
+}
+@keyframes blink {
+  to {
+    background: transparent;
   }
 }
 
