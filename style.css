@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: var(--bg-color);
+}
+
+h1 {
+  font-size: clap(1rm, 3vw + 1rm, 4rem);
+  position: relative;
+}
+
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+h1::before {
+  background: teal;
+}
+
+.subtitle {
+  color: hs1(0 0% 0% /0.7);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
